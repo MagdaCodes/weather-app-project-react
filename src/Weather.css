@@ -1,9 +1,12 @@
 .Weather {
   font-family: arial, sans-serif;
+  background: linear-gradient(to bottom, #ffe6cf 5%, #fff1eb 15%, #ace0f9 89%);
   border: 1px solid #dadde1;
   padding: 16px;
   border-radius: 4px;
   color: rgb(135, 135, 135);
+  box-shadow: 5px 5px 15px #234685;
+  border-radius: 20px;
 }
 .Weather form {
   margin-bottom: 20px;
@@ -13,6 +16,7 @@
   font-weight: 100;
   margin: 20px 0 0 0;
   line-height: 29px;
+  color: #234685;
 }
 .Weather ul {
   margin: 0;
@@ -23,6 +27,7 @@
   font-weight: 100;
   line-height: 19px;
   list-style: none;
+  color: #234685;
 }
 .Weather canvas {
   margin-top: 5px;
@@ -43,4 +48,7 @@
   position: relative;
   line-height: 1;
   top: -34px;
+}
+.WeatherInfo {
+  color: #234685;
 }
