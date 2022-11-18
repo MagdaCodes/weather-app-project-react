@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import WeatherForecastDay from "./WeatherForecastaDay.js";
+import WeatherForecastDay from "./WeatherForecastDay.js";
 import "./WeatherForecast.css";
 import axios from "axios";
 
@@ -12,12 +12,11 @@ export default function WeatherForecast(props) {
   }
 
   if (loaded) {
-    console.log(forecast);
     return (
       <div className="WeatherForecast">
         <div className="row">
           <div className="col">
-            <WeatherForecastDay data={forecast} />
+            <WeatherForecastDay daily={forecast[0]} />
           </div>
         </div>
       </div>
@@ -26,7 +25,7 @@ export default function WeatherForecast(props) {
     let apiKey = "a5f3ead5eo0c344a0d7t4ba1b099b8ed";
     let longitude = props.coordinates.longitude;
     let latitude = props.coordinates.latitude;
-    let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${longitude}}&lat=${latitude}&key=${apiKey}&units=metric`;
+    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${longitude}&lat=${latitude}&key=${apiKey}&units=metric`;
 
     axios.get(apiUrl).then(handleResponse);
     return null;
