@@ -1,7 +1,17 @@
 .WeatherForecast {
   text-align: center;
+  font-family: "Lato", sans-serif;
+  text-transform: uppercase;
 }
 .Forecast-temp-min {
   opacity: 0.6;
   margin-left: 5px;
+  color: #234685;
+}
+.Forecast-temp-max {
+  color: #234685;
+}
+.Forecast-day {
+  color: #234685;
+  margin-top: 10px;
 }
